@@ -1,5 +1,10 @@
+// The commented out lines are for windows, I am developing on linux so I have them disabled
+
+// #define VK_USE_PLATFORM_WIN32_KHR
 #define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
+// #define GLFW_EXPOSE_NATIVE_WIN32
+// #include <GLFW/glfw3native.h>
 
 #include <iostream>
 #include <stdexcept>
@@ -7,6 +12,7 @@
 #include <vector>
 #include <cstring>
 #include <optional>
+#include <ctime>
 
 // Use constants for window
 const uint32_t WIDTH = 800;
@@ -17,7 +23,7 @@ const std::vector<const char*> validationLayers = {
     "VK_LAYER_KHRONOS_validation"
 };
 
-// Enable validation layers
+// Enable validation layers, disable for release
 const bool enableValidationLayers = true;
 
 // Holds indices of queue families we want to use
@@ -32,9 +38,12 @@ struct QueueFamilyIndices {
 class HelloTriangleApplication {
 public:
     void run() {
+        std::clock_t start = std::clock();
         initWindow();
         showExtensions();
         initVulkan();
+        std::clock_t end = std::clock();
+        printf("Initialization took %f seconds\n", (double)(end - start) / CLOCKS_PER_SEC);
         mainLoop();
         cleanup();
     }
@@ -45,6 +54,8 @@ private:
     VkDevice device;
     VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
     VkQueue graphicsQueue;
+    //an abstract type of surface to present rendered images to
+    VkSurfaceKHR surface;
 
     void initWindow() {
         glfwInit();
@@ -58,6 +69,7 @@ private:
 
     void initVulkan() {
         createInstance();
+        createSurface();
         pickPhysicalDevice();
         createLogicalDevice();
     }
@@ -74,6 +86,15 @@ private:
         std::cout << "Available Vulkan extensions:" << std::endl;
         for (const auto& extension : extensions) {
             std::cout << "\t" << extension.extensionName << std::endl;
+        }
+    }
+
+    void createSurface() {
+        // Create a surface for rendering, this is platform specific but GLFW abstracts it away
+        if (glfwCreateWindowSurface(instance, window, nullptr, &surface) != VK_SUCCESS) {
+            throw std::runtime_error("failed to create window surface!");
+        } else {
+            std::cout << "Vulkan surface created successfully!" << std::endl;
         }
     }
 
@@ -252,6 +273,7 @@ private:
     void cleanup() {
         // destroy vulkan instance and window and logical device
         vkDestroyDevice(device, nullptr);
+        vkDestroySurfaceKHR(instance, surface, nullptr);
         vkDestroyInstance(instance, nullptr);
         glfwDestroyWindow(window);
 
