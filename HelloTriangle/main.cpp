@@ -20,6 +20,7 @@ const std::vector<const char*> validationLayers = {
 // Enable validation layers
 const bool enableValidationLayers = true;
 
+// Holds indices of queue families we want to use
 struct QueueFamilyIndices {
     std::optional<uint32_t> graphicsFamily;
 
@@ -41,6 +42,9 @@ public:
 private:
     GLFWwindow* window = nullptr;
     VkInstance instance;
+    VkDevice device;
+    VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
+    VkQueue graphicsQueue;
 
     void initWindow() {
         glfwInit();
@@ -55,10 +59,12 @@ private:
     void initVulkan() {
         createInstance();
         pickPhysicalDevice();
+        createLogicalDevice();
     }
 
     void showExtensions() {
         //Use vkEnumerateInstanceExtensionProperties to find possible extensions
+        //Extensions are optional features that can be added
         uint32_t extensionCount = 0;
         vkEnumerateInstanceExtensionProperties(nullptr, &extensionCount, nullptr);
 
@@ -73,7 +79,6 @@ private:
 
     void pickPhysicalDevice() {
         //Picks a gpu to use
-        VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
         uint32_t deviceCount = 0;
         vkEnumeratePhysicalDevices(instance, &deviceCount, nullptr);
 
@@ -94,10 +99,7 @@ private:
 
         if (physicalDevice == VK_NULL_HANDLE) {
             throw std::runtime_error("failed to find a suitable GPU!");
-        } else {
-            //print the name of the device we are using            
         }
-
     }
 
     bool isDeviceSuitable(VkPhysicalDevice device) {
@@ -192,6 +194,51 @@ private:
             std::cout << "Vulkan instance created successfully!" << std::endl;
         }
     }
+
+    void createLogicalDevice() {
+        // Logical device allows us to interface with the physical device and use its features
+        // We have to specify which queues we want to use from the physical device, and also which features we want to use
+        QueueFamilyIndices indices = findQueueFamilies(physicalDevice);
+
+        // Specify the queues we want to create for the logical device
+        VkDeviceQueueCreateInfo queueCreateInfo{};
+        queueCreateInfo.sType = VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO;
+        queueCreateInfo.queueFamilyIndex = indices.graphicsFamily.value();
+        queueCreateInfo.queueCount = 1;
+
+        //Required step, sets the proiority of the queue frmo 0 and 1
+        float queuePriority = 1.0f;
+        queueCreateInfo.pQueuePriorities = &queuePriority;
+        
+        // will pass device queue create info into logical device
+        VkDeviceCreateInfo createInfo{};
+        createInfo.sType = VK_STRUCTURE_TYPE_DEVICE_CREATE_INFO;
+
+        createInfo.pQueueCreateInfos = &queueCreateInfo;
+        createInfo.queueCreateInfoCount = 1;
+
+        VkPhysicalDeviceFeatures deviceFeatures{};
+        createInfo.pEnabledFeatures = &deviceFeatures;
+
+        createInfo.enabledExtensionCount = 0;
+
+        // Deprecated in modern vulkan, only need it at the instance level
+        //
+        // if (enableValidationLayers) {
+        //     createInfo.enabledLayerCount = static_cast<uint32_t>(validationLayers.size());
+        //     createInfo.ppEnabledLayerNames = validationLayers.data();
+        // } else {
+        //     createInfo.enabledLayerCount = 0;
+        // }
+
+        if (vkCreateDevice(physicalDevice, &createInfo, nullptr, &device) != VK_SUCCESS) {
+            throw std::runtime_error("failed to create logical device!");
+        } else {
+            std::cout << "Vulkan logical device created successfully!" << std::endl;
+        }
+
+        vkGetDeviceQueue(device, indices.graphicsFamily.value(), 0, &graphicsQueue);
+    }
     
 
     void mainLoop() {
@@ -203,7 +250,8 @@ private:
 
 
     void cleanup() {
-        // destroy vulkan instance and window
+        // destroy vulkan instance and window and logical device
+        vkDestroyDevice(device, nullptr);
         vkDestroyInstance(instance, nullptr);
         glfwDestroyWindow(window);
 
@@ -218,7 +266,7 @@ private:
         std::vector<VkLayerProperties> availableLayers(layerCount);
         vkEnumerateInstanceLayerProperties(&layerCount, availableLayers.data());
 
-        // loop through our validation layers and see which layers are available
+        // loop through our validation layers and see which layers match up with the layers we want
         for (const char* layerName : validationLayers) {
             bool layerFound = false;
 
