@@ -1,0 +1,3 @@
+/home/abhiram/Documents/Learning-Vulkan/HelloTriangle/build/CMakeFiles/VulkanApp.dir
+/home/abhiram/Documents/Learning-Vulkan/HelloTriangle/build/CMakeFiles/edit_cache.dir
+/home/abhiram/Documents/Learning-Vulkan/HelloTriangle/build/CMakeFiles/rebuild_cache.dir
