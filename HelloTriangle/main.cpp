@@ -211,6 +211,51 @@ private:
         return details;
     }
 
+    VkSurfaceFormatKHR chooseSwapSurfaceFormat(const std::vector<VkSurfaceFormatKHR>& avaialableFormats) { 
+        // Pick the color space specified (can also rank them and pick)
+        for (const auto& availableFormat : avaialableFormats) {
+            if (availableFormat.format == VK_FORMAT_B8G8R8A8_SRGB && availableFormat.colorSpace == VK_COLOR_SPACE_SRGB_NONLINEAR_KHR) {
+                return availableFormat;
+            }
+        }
+
+        // If the preferred format isn't available, just return the first one
+        return avaialableFormats[0];
+    }
+
+    VkPresentModeKHR chooseSwapPresentMode(const std::vector<VkPresentModeKHR>& availablePresentModes) {
+        // Mailbox mode is the lowest latency non-tearing present mode, but it may not be supported on all platforms
+        for (const auto& availablePresentMode : availablePresentModes) {
+            if (availablePresentMode == VK_PRESENT_MODE_MAILBOX_KHR) {
+                return availablePresentMode;
+            }
+        }
+
+        // If mailbox mode isn't available, fall back to FIFO which is guaranteed to be supported
+        return VK_PRESENT_MODE_FIFO_KHR;
+    }
+
+    VkExtent2D chooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities) {
+        // The swap extent is the resolution of the swapchain images, it should match the resolution of the window
+        if (capabilities.currentExtent.width != UINT32_MAX) {
+            return capabilities.currentExtent;
+        } else {
+            int width, height;
+            glfwGetFramebufferSize(window, &width, &height);
+
+            VkExtent2D actualExtent = {
+                static_cast<uint32_t>(width),
+                static_cast<uint32_t>(height)
+            };
+
+            // Clamp the extent to the allowed min and max extents
+            actualExtent.width = std::max(capabilities.minImageExtent.width, std::min(capabilities.maxImageExtent.width, actualExtent.width));
+            actualExtent.height = std::max(capabilities.minImageExtent.height, std::min(capabilities.maxImageExtent.height, actualExtent.height));
+
+            return actualExtent;
+        }
+    }
+
     QueueFamilyIndices findQueueFamilies(VkPhysicalDevice device) {
         // Everything in vulkan is executed on queues, there ae different types of queues for different types of operations (graphics, compute, transfer)
         // this will find graphics queues
