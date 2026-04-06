@@ -1,7 +1,7 @@
 [
 {
   "directory": "/home/abhiram/Documents/Learning-Vulkan/HelloTriangle/build",
-  "command": "/usr/bin/c++   -std=gnu++17 -Wall -Wextra -o CMakeFiles/VulkanApp.dir/main.cpp.o -c /home/abhiram/Documents/Learning-Vulkan/HelloTriangle/main.cpp",
+  "command": "/usr/bin/c++  -isystem /home/abhiram/1.4.341.1/x86_64/include -std=gnu++17 -Wall -Wextra -o CMakeFiles/VulkanApp.dir/main.cpp.o -c /home/abhiram/Documents/Learning-Vulkan/HelloTriangle/main.cpp",
   "file": "/home/abhiram/Documents/Learning-Vulkan/HelloTriangle/main.cpp",
   "output": "CMakeFiles/VulkanApp.dir/main.cpp.o"
 }

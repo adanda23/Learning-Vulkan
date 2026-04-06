@@ -1,1 +1,1 @@
-/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/VulkanApp.dir/link.d CMakeFiles/VulkanApp.dir/main.cpp.o -o VulkanApp  /usr/lib/libvulkan.so /usr/lib/libglfw.so.3.4
+/usr/bin/c++ CMakeFiles/VulkanApp.dir/main.cpp.o -o VulkanApp  -Wl,-rpath,/home/abhiram/1.4.341.1/x86_64/lib /home/abhiram/1.4.341.1/x86_64/lib/libvulkan.so /usr/lib/x86_64-linux-gnu/libglfw.so.3.3 
