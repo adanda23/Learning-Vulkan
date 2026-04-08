@@ -1,0 +1,40 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/VulkanApp.dir/link.d"
+  "CMakeFiles/VulkanApp.dir/src/CommandBuffer.cpp.o"
+  "CMakeFiles/VulkanApp.dir/src/CommandBuffer.cpp.o.d"
+  "CMakeFiles/VulkanApp.dir/src/CommandPool.cpp.o"
+  "CMakeFiles/VulkanApp.dir/src/CommandPool.cpp.o.d"
+  "CMakeFiles/VulkanApp.dir/src/Framebuffers.cpp.o"
+  "CMakeFiles/VulkanApp.dir/src/Framebuffers.cpp.o.d"
+  "CMakeFiles/VulkanApp.dir/src/GraphicsPipeline.cpp.o"
+  "CMakeFiles/VulkanApp.dir/src/GraphicsPipeline.cpp.o.d"
+  "CMakeFiles/VulkanApp.dir/src/ImageViews.cpp.o"
+  "CMakeFiles/VulkanApp.dir/src/ImageViews.cpp.o.d"
+  "CMakeFiles/VulkanApp.dir/src/Instance.cpp.o"
+  "CMakeFiles/VulkanApp.dir/src/Instance.cpp.o.d"
+  "CMakeFiles/VulkanApp.dir/src/LogicalDevice.cpp.o"
+  "CMakeFiles/VulkanApp.dir/src/LogicalDevice.cpp.o.d"
+  "CMakeFiles/VulkanApp.dir/src/PhysicalDevice.cpp.o"
+  "CMakeFiles/VulkanApp.dir/src/PhysicalDevice.cpp.o.d"
+  "CMakeFiles/VulkanApp.dir/src/RenderPass.cpp.o"
+  "CMakeFiles/VulkanApp.dir/src/RenderPass.cpp.o.d"
+  "CMakeFiles/VulkanApp.dir/src/ShaderModule.cpp.o"
+  "CMakeFiles/VulkanApp.dir/src/ShaderModule.cpp.o.d"
+  "CMakeFiles/VulkanApp.dir/src/Surface.cpp.o"
+  "CMakeFiles/VulkanApp.dir/src/Surface.cpp.o.d"
+  "CMakeFiles/VulkanApp.dir/src/SwapChain.cpp.o"
+  "CMakeFiles/VulkanApp.dir/src/SwapChain.cpp.o.d"
+  "CMakeFiles/VulkanApp.dir/src/SyncObjects.cpp.o"
+  "CMakeFiles/VulkanApp.dir/src/SyncObjects.cpp.o.d"
+  "CMakeFiles/VulkanApp.dir/src/ValidationLayers.cpp.o"
+  "CMakeFiles/VulkanApp.dir/src/ValidationLayers.cpp.o.d"
+  "CMakeFiles/VulkanApp.dir/src/main.cpp.o"
+  "CMakeFiles/VulkanApp.dir/src/main.cpp.o.d"
+  "VulkanApp"
+  "VulkanApp.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/VulkanApp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

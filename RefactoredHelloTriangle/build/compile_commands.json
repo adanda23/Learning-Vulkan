@@ -1,0 +1,92 @@
+[
+{
+  "directory": "/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/build",
+  "command": "/usr/bin/c++  -I/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/include -std=gnu++17 -Wall -Wextra -o CMakeFiles/HelloTriangle.dir/src/CommandBuffer.cpp.o -c /home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/src/CommandBuffer.cpp",
+  "file": "/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/src/CommandBuffer.cpp",
+  "output": "CMakeFiles/HelloTriangle.dir/src/CommandBuffer.cpp.o"
+},
+{
+  "directory": "/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/build",
+  "command": "/usr/bin/c++  -I/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/include -std=gnu++17 -Wall -Wextra -o CMakeFiles/HelloTriangle.dir/src/CommandPool.cpp.o -c /home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/src/CommandPool.cpp",
+  "file": "/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/src/CommandPool.cpp",
+  "output": "CMakeFiles/HelloTriangle.dir/src/CommandPool.cpp.o"
+},
+{
+  "directory": "/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/build",
+  "command": "/usr/bin/c++  -I/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/include -std=gnu++17 -Wall -Wextra -o CMakeFiles/HelloTriangle.dir/src/Framebuffers.cpp.o -c /home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/src/Framebuffers.cpp",
+  "file": "/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/src/Framebuffers.cpp",
+  "output": "CMakeFiles/HelloTriangle.dir/src/Framebuffers.cpp.o"
+},
+{
+  "directory": "/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/build",
+  "command": "/usr/bin/c++  -I/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/include -std=gnu++17 -Wall -Wextra -o CMakeFiles/HelloTriangle.dir/src/GraphicsPipeline.cpp.o -c /home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/src/GraphicsPipeline.cpp",
+  "file": "/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/src/GraphicsPipeline.cpp",
+  "output": "CMakeFiles/HelloTriangle.dir/src/GraphicsPipeline.cpp.o"
+},
+{
+  "directory": "/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/build",
+  "command": "/usr/bin/c++  -I/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/include -std=gnu++17 -Wall -Wextra -o CMakeFiles/HelloTriangle.dir/src/ImageViews.cpp.o -c /home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/src/ImageViews.cpp",
+  "file": "/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/src/ImageViews.cpp",
+  "output": "CMakeFiles/HelloTriangle.dir/src/ImageViews.cpp.o"
+},
+{
+  "directory": "/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/build",
+  "command": "/usr/bin/c++  -I/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/include -std=gnu++17 -Wall -Wextra -o CMakeFiles/HelloTriangle.dir/src/Instance.cpp.o -c /home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/src/Instance.cpp",
+  "file": "/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/src/Instance.cpp",
+  "output": "CMakeFiles/HelloTriangle.dir/src/Instance.cpp.o"
+},
+{
+  "directory": "/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/build",
+  "command": "/usr/bin/c++  -I/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/include -std=gnu++17 -Wall -Wextra -o CMakeFiles/HelloTriangle.dir/src/LogicalDevice.cpp.o -c /home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/src/LogicalDevice.cpp",
+  "file": "/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/src/LogicalDevice.cpp",
+  "output": "CMakeFiles/HelloTriangle.dir/src/LogicalDevice.cpp.o"
+},
+{
+  "directory": "/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/build",
+  "command": "/usr/bin/c++  -I/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/include -std=gnu++17 -Wall -Wextra -o CMakeFiles/HelloTriangle.dir/src/PhysicalDevice.cpp.o -c /home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/src/PhysicalDevice.cpp",
+  "file": "/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/src/PhysicalDevice.cpp",
+  "output": "CMakeFiles/HelloTriangle.dir/src/PhysicalDevice.cpp.o"
+},
+{
+  "directory": "/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/build",
+  "command": "/usr/bin/c++  -I/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/include -std=gnu++17 -Wall -Wextra -o CMakeFiles/HelloTriangle.dir/src/RenderPass.cpp.o -c /home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/src/RenderPass.cpp",
+  "file": "/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/src/RenderPass.cpp",
+  "output": "CMakeFiles/HelloTriangle.dir/src/RenderPass.cpp.o"
+},
+{
+  "directory": "/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/build",
+  "command": "/usr/bin/c++  -I/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/include -std=gnu++17 -Wall -Wextra -o CMakeFiles/HelloTriangle.dir/src/ShaderModule.cpp.o -c /home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/src/ShaderModule.cpp",
+  "file": "/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/src/ShaderModule.cpp",
+  "output": "CMakeFiles/HelloTriangle.dir/src/ShaderModule.cpp.o"
+},
+{
+  "directory": "/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/build",
+  "command": "/usr/bin/c++  -I/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/include -std=gnu++17 -Wall -Wextra -o CMakeFiles/HelloTriangle.dir/src/Surface.cpp.o -c /home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/src/Surface.cpp",
+  "file": "/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/src/Surface.cpp",
+  "output": "CMakeFiles/HelloTriangle.dir/src/Surface.cpp.o"
+},
+{
+  "directory": "/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/build",
+  "command": "/usr/bin/c++  -I/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/include -std=gnu++17 -Wall -Wextra -o CMakeFiles/HelloTriangle.dir/src/SwapChain.cpp.o -c /home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/src/SwapChain.cpp",
+  "file": "/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/src/SwapChain.cpp",
+  "output": "CMakeFiles/HelloTriangle.dir/src/SwapChain.cpp.o"
+},
+{
+  "directory": "/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/build",
+  "command": "/usr/bin/c++  -I/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/include -std=gnu++17 -Wall -Wextra -o CMakeFiles/HelloTriangle.dir/src/SyncObjects.cpp.o -c /home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/src/SyncObjects.cpp",
+  "file": "/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/src/SyncObjects.cpp",
+  "output": "CMakeFiles/HelloTriangle.dir/src/SyncObjects.cpp.o"
+},
+{
+  "directory": "/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/build",
+  "command": "/usr/bin/c++  -I/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/include -std=gnu++17 -Wall -Wextra -o CMakeFiles/HelloTriangle.dir/src/ValidationLayers.cpp.o -c /home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/src/ValidationLayers.cpp",
+  "file": "/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/src/ValidationLayers.cpp",
+  "output": "CMakeFiles/HelloTriangle.dir/src/ValidationLayers.cpp.o"
+},
+{
+  "directory": "/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/build",
+  "command": "/usr/bin/c++  -I/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/include -std=gnu++17 -Wall -Wextra -o CMakeFiles/HelloTriangle.dir/src/main.cpp.o -c /home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/src/main.cpp",
+  "file": "/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/src/main.cpp",
+  "output": "CMakeFiles/HelloTriangle.dir/src/main.cpp.o"
+}
+]

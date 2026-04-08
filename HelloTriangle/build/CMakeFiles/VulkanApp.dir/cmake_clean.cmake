@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/VulkanApp.dir/link.d"
   "CMakeFiles/VulkanApp.dir/main.cpp.o"
   "CMakeFiles/VulkanApp.dir/main.cpp.o.d"
   "VulkanApp"

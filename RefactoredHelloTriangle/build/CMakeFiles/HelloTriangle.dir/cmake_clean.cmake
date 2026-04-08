@@ -1,0 +1,40 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/HelloTriangle.dir/link.d"
+  "CMakeFiles/HelloTriangle.dir/src/CommandBuffer.cpp.o"
+  "CMakeFiles/HelloTriangle.dir/src/CommandBuffer.cpp.o.d"
+  "CMakeFiles/HelloTriangle.dir/src/CommandPool.cpp.o"
+  "CMakeFiles/HelloTriangle.dir/src/CommandPool.cpp.o.d"
+  "CMakeFiles/HelloTriangle.dir/src/Framebuffers.cpp.o"
+  "CMakeFiles/HelloTriangle.dir/src/Framebuffers.cpp.o.d"
+  "CMakeFiles/HelloTriangle.dir/src/GraphicsPipeline.cpp.o"
+  "CMakeFiles/HelloTriangle.dir/src/GraphicsPipeline.cpp.o.d"
+  "CMakeFiles/HelloTriangle.dir/src/ImageViews.cpp.o"
+  "CMakeFiles/HelloTriangle.dir/src/ImageViews.cpp.o.d"
+  "CMakeFiles/HelloTriangle.dir/src/Instance.cpp.o"
+  "CMakeFiles/HelloTriangle.dir/src/Instance.cpp.o.d"
+  "CMakeFiles/HelloTriangle.dir/src/LogicalDevice.cpp.o"
+  "CMakeFiles/HelloTriangle.dir/src/LogicalDevice.cpp.o.d"
+  "CMakeFiles/HelloTriangle.dir/src/PhysicalDevice.cpp.o"
+  "CMakeFiles/HelloTriangle.dir/src/PhysicalDevice.cpp.o.d"
+  "CMakeFiles/HelloTriangle.dir/src/RenderPass.cpp.o"
+  "CMakeFiles/HelloTriangle.dir/src/RenderPass.cpp.o.d"
+  "CMakeFiles/HelloTriangle.dir/src/ShaderModule.cpp.o"
+  "CMakeFiles/HelloTriangle.dir/src/ShaderModule.cpp.o.d"
+  "CMakeFiles/HelloTriangle.dir/src/Surface.cpp.o"
+  "CMakeFiles/HelloTriangle.dir/src/Surface.cpp.o.d"
+  "CMakeFiles/HelloTriangle.dir/src/SwapChain.cpp.o"
+  "CMakeFiles/HelloTriangle.dir/src/SwapChain.cpp.o.d"
+  "CMakeFiles/HelloTriangle.dir/src/SyncObjects.cpp.o"
+  "CMakeFiles/HelloTriangle.dir/src/SyncObjects.cpp.o.d"
+  "CMakeFiles/HelloTriangle.dir/src/ValidationLayers.cpp.o"
+  "CMakeFiles/HelloTriangle.dir/src/ValidationLayers.cpp.o.d"
+  "CMakeFiles/HelloTriangle.dir/src/main.cpp.o"
+  "CMakeFiles/HelloTriangle.dir/src/main.cpp.o.d"
+  "HelloTriangle"
+  "HelloTriangle.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/HelloTriangle.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
