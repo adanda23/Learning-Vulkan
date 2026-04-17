@@ -10,7 +10,7 @@ Next we need to setup our physical and logical devices. The physical device is t
 
 ## Window surfaces
 
-Next, we need to create our window surface. A window surface is a abstract surface that we can present images to. This goes after vulkan initializiation as physical devices are dependent on the surface. This is because some physical devices might not support certain surface formats, so we need to create the surface before we can select a physical device. 
+Next, we need to create our window surface. A window surface is a abstract surface that we can present images to. This goes after vulkan initializiation as physical devices are dependent on the surface. This is because some physical devices might not support certain surface formats, so we need to create the surface before we can select a physical device.
 
 ## Swapchain
 
@@ -23,12 +23,14 @@ After these initial setup steps, we can finally get to the graphics pipeline. Th
 
 Commands in Vulkan are recorded with command buffers, which are stored in command pools. Command buffers get submitted to the device queues. commands include setting the viewport, set the scissor, using the aforementined pipeline, and actually drawing to the window.
 
-### Need to further investigate:
+## Other
 
-swapchain vs framebuffer
-command buffers
-render passes
+### Need to further study these topics
+
+1. swapchain vs framebuffer
+2. command buffers
+3. render passes
 
 ### Credits
 
-Much of the setup is being taken from [here](https://vulkan-tutorial.com).
+Much of the setup is being taken from [link to tutorial](https://vulkan-tutorial.com).
