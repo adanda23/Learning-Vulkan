@@ -1,7 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/home/abhiram/Documents/Learning-Vulkan/RefactoredHelloTriangle/build/cmake_install.cmake"
-	],
-	"Parallel" : false
-}
